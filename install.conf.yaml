@@ -22,7 +22,7 @@
     ~/.profile: home/profile
     ~/.rspec: home/rspec
     ~/.screenrc: home/screenrc
-    ~/.train.wav: home/train.wav
+    ~/.sounds: home/sounds
     ~/.wgetrc: home/wgetrc
     ~/.zshrc: home/zshrc
 
