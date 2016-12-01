@@ -1,0 +1,26 @@
+# Default gitignore configuration
+
+# Compiled Python files
+*.pyc
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+.gitconfig
+
+.ssh
+.oh-my-zsh
+!.oh-my-zsh/themes
+
+# Resource folder
+resource
+resources

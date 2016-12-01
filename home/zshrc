@@ -1,0 +1,51 @@
+source $HOME/.profile
+source $HOME/.antigen/antigen.zsh
+
+COMPLETION_WAITING_DOTS="true"
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+setopt RM_STAR_WAIT
+export HISTSIZE=32768;
+
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+. `brew --prefix`/etc/profile.d/z.sh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle brew
+antigen bundle brew-cask
+antigen bundle catimg
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle gem
+antigen bundle git
+antigen bundle github
+antigen bundle heroku
+antigen bundle lol
+antigen bundle node
+antigen bundle npm
+antigen bundle osx
+antigen bundle rails
+antigen bundle ruby
+antigen bundle rvm
+antigen bundle z
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Autoenv
+antigen bundle Tarrasch/zsh-autoenv
+
+# Tell antigen that you're done.
+antigen apply
+
+# load zmv
+autoload zmv
+
+# Load the theme
+antigen bundle denysdovhan/spaceship-zsh-theme

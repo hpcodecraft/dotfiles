@@ -1,0 +1,30 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.atom: home/atom
+    ~/.oh-my-zsh: home/oh-my-zsh
+    ~/.js: home/js
+    ~/.aliases: home/aliases
+    ~/.exports: home/exports
+    ~/.functions: home/functions
+    ~/.git-ls: home/git-ls
+    ~/.gitattributes: home/gitattributes
+    ~/.gitconfig: home/gitconfig
+    ~/.gitignore: home/gitignore
+    ~/.hyperterm.js: home/hyperterm.js
+    ~/.jshintrc: home/jshintrc
+    ~/.nanorc: home/nanorc
+    ~/.profile: home/profile
+    ~/.rspec: home/rspec
+    ~/.screenrc: home/screenrc
+    ~/.train.wav: home/train.wav
+    ~/.wgetrc: home/wgetrc
+    ~/.zshrc: home/zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

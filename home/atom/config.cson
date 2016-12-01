@@ -1,0 +1,47 @@
+"*":
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "language-dotfiles"
+      "hard-wrap"
+      "rails-snippets"
+      "language-clojure"
+      "language-go"
+      "language-java"
+      "language-make"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-python"
+      "language-toml"
+      "metrics"
+      "welcome"
+      "language-csharp"
+      "language-c"
+      "exception-reporting"
+      "background-tips"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "gruvbox-plus-syntax"
+    ]
+  editor:
+    fontFamily: "Inconsolata-dz"
+    fontSize: 17
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabType: "soft"
+  emmet: {}
+  "exception-reporting":
+    userId: "93b4b548-bd92-929b-94c1-d943d5b6d3f9"
+  "markdown-preview":
+    useGitHubStyle: true
+  minimap: {}
+  "one-dark-ui": {}
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false

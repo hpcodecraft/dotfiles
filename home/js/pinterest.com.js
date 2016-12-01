@@ -1,0 +1,3 @@
+$(function() {
+  $('.Module.Nags').remove();
+});
