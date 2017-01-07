@@ -20,6 +20,8 @@
       "language-c"
       "exception-reporting"
       "background-tips"
+      "emmet"
+      "dash"
     ]
     themes: [
       "atom-dark-ui"
@@ -27,7 +29,7 @@
     ]
   editor:
     fontFamily: "Inconsolata-dz"
-    fontSize: 17
+    fontSize: 15
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -40,6 +42,9 @@
     useGitHubStyle: true
   minimap: {}
   "one-dark-ui": {}
+  swackets:
+    colorParens: true
+    colorSquareBrackets: true
   "tree-view": {}
   welcome:
     showOnStartup: false

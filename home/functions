@@ -193,3 +193,7 @@ function f()  {
 function kill9() {
 	afplay ~/.sounds/kill-9.wav && kill -9 $1
 }
+
+function docker-bash() {
+	docker exec -i -t $1 /bin/bash 
+}
