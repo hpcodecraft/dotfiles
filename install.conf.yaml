@@ -6,10 +6,9 @@
 - clean: ['~']
 
 - link:
-    ~/.atom: home/atom
-    ~/.oh-my-zsh: home/oh-my-zsh
-    ~/.js: home/js
     ~/.aliases: home/aliases
+    ~/.atom: home/atom
+    ~/.docker: home/docker
     ~/.exports: home/exports
     ~/.functions: home/functions
     ~/.git-ls: home/git-ls
@@ -17,8 +16,10 @@
     ~/.gitconfig: home/gitconfig
     ~/.gitignore: home/gitignore
     ~/.hyperterm.js: home/hyperterm.js
+    ~/.js: home/js
     ~/.jshintrc: home/jshintrc
     ~/.nanorc: home/nanorc
+    ~/.oh-my-zsh: home/oh-my-zsh
     ~/.profile: home/profile
     ~/.rspec: home/rspec
     ~/.screenrc: home/screenrc
