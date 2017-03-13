@@ -12,7 +12,6 @@
       "language-mustache"
       "language-objective-c"
       "language-perl"
-      "language-python"
       "language-toml"
       "metrics"
       "welcome"
@@ -29,7 +28,6 @@
     ]
   editor:
     fontFamily: "Inconsolata-dz"
-    fontSize: 15
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true

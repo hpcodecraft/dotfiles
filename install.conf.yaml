@@ -8,6 +8,7 @@
 - link:
     ~/.aliases: home/aliases
     ~/.atom: home/atom
+    ~/.bitbar: home/bitbar
     ~/.docker: home/docker
     ~/.exports: home/exports
     ~/.functions: home/functions

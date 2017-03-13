@@ -146,3 +146,7 @@ alias yolo="git commit -am '`curl -s http://whatthecommit.com/index.txt`'"
 alias list-zsh-colors="spectrum_ls"
 
 alias htaccess="cat /Applications/MAMP/conf/apache/httpd.conf|grep AccessFileName|tail -n 1|awk '{ print $2 }'"
+
+alias npm-default="npm config set registry https://registry.npmjs.org"
+alias npm-xing="npm config set registry http://npmo.dc.xing.com:8080"
+

@@ -24,3 +24,7 @@
   'Include debugger':
     'prefix': 'debug'
     'body': '<% require \'pry\'; binding.pry %>'
+'.source.ruby':
+  'byebug':
+    'prefix': 'bb'
+    'body': 'require "byebug"; byebug;'
