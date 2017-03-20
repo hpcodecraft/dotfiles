@@ -36,6 +36,8 @@
   emmet: {}
   "exception-reporting":
     userId: "93b4b548-bd92-929b-94c1-d943d5b6d3f9"
+  jshint:
+    supportLintingJsx: true
   "markdown-preview":
     useGitHubStyle: true
   minimap: {}
