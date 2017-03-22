@@ -1,14 +1,12 @@
 #!/usr/local/bin/node
-/*
-# <bitbar.title>Moon Phase</bitbar.title>
-# <bitbar.version>v1.0</bitbar.version>
-# <bitbar.author>Volker Wieban</bitbar.author>
-# <bitbar.author.github>hpcodecraft</bitbar.author.github>
-# <bitbar.desc>Shows the current moon phase</bitbar.desc>
-# <bitbar.image></bitbar.image>
-# <bitbar.dependencies>node</bitbar.dependencies>
-# <bitbar.abouturl></bitbar.abouturl>
-*/
+
+// <bitbar.title>Moon Phase</bitbar.title>
+// <bitbar.version>v1.0</bitbar.version>
+// <bitbar.author>Volker Wieban</bitbar.author>
+// <bitbar.author.github>hpcodecraft</bitbar.author.github>
+// <bitbar.desc>Shows the current moon phase</bitbar.desc>
+// <bitbar.image>https://cloud.githubusercontent.com/assets/1476865/24201253/ce0d8c5e-0f0f-11e7-8e44-503654407850.png</bitbar.image>
+// <bitbar.dependencies>node</bitbar.dependencies>
 
 // Moon phase calculations taken from https://github.com/tingletech/moon-phase
 Date.prototype.getJulian = function() {
@@ -53,66 +51,45 @@ function moon_day(today) {
     return (((thisJD - oldJ) / 29.53059));
 }
 
-function phase_junk(phase) {
-    var sweep = [];
-    var mag;
-    // the "sweep-flag" and the direction of movement change every quarter moon
-    // zero and one are both new moon; 0.50 is full moon
-    if (phase <= 0.25) {
-        sweep = [ 1, 0 ];
-        mag = 20 - 20 * phase * 4
-    } else if (phase <= 0.50) {
-        sweep = [ 0, 0 ];
-        mag = 20 * (phase - 0.25) * 4
-    } else if (phase <= 0.75) {
-        sweep = [ 1, 1 ];
-        mag = 20 - 20 * (phase - 0.50) * 4
-    } else if (phase <= 1) {
-        sweep = [ 0, 1 ];
-        mag = 20 * (phase - 0.75) * 4
-    } else {
-        exit;
-    }
-    var phase;
+function phase_text(phase) {
+    var txt_phase;
     if (phase <= 0.0625 || phase > 0.9375) {
-        phase = "new_moon";
+        txt_phase = "new_moon";
     } else if (phase <= 0.1875) {
-        phase = "waxing_crescent_moon";
+        txt_phase = "waxing_crescent_moon";
     } else if (phase <= 0.3125) {
-        phase = "first_quarter_moon";
+        txt_phase = "first_quarter_moon";
     } else if (phase <= 0.4375) {
-        phase = "waxing_gibbous_moon";
+        txt_phase = "waxing_gibbous_moon";
     } else if (phase <= 0.5625) {
-        phase = "full_moon";
+        txt_phase = "full_moon";
     } else if (phase <= 0.6875) {
-        phase = "waning_gibbous_moon";
+        txt_phase = "waning_gibbous_moon";
     } else if (phase <= 0.8125) {
-        phase = "last_quarter_moon";
+        txt_phase = "last_quarter_moon";
     } else if (phase <= 0.9375) {
-        phase = "waning_crescent_moon";
+        txt_phase = "waning_crescent_moon";
     }
 
-    return phase;
+    return txt_phase;
 }
 
-function moon_emoji(phase) {
-  return ':' + phase + ':';
-}
-
-var phaseText = {
-  "new_moon": "New moon",
-  "waxing_crescent_moon": "Waxing crescent moon",
-  "first_quarter_moon": "First quarter moon",
-  "waxing_gibbous_moon": "Waxing gibbous moon",
-  "full_moon": "Full moon",
-  "waning_gibbous_moon": "Waning gibbous moon",
-  "last_quarter_moon": "Last quarter moon",
-  "waning_crescent_moon": "Waning crescent moon",
+var phaseLabel = {
+  "new_moon"              : "New moon",
+  "waxing_crescent_moon"  : "Waxing crescent moon",
+  "first_quarter_moon"    : "First quarter moon",
+  "waxing_gibbous_moon"   : "Waxing gibbous moon",
+  "full_moon"             : "Full moon",
+  "waning_gibbous_moon"   : "Waning gibbous moon",
+  "last_quarter_moon"     : "Third quarter moon",
+  "waning_crescent_moon"  : "Waning crescent moon",
 };
 
-var phase =   phase_junk(moon_day(new Date()));
-var output =  moon_emoji(phase) + '|dropdown=false \n' +
+var phase     = moon_day(new Date()),
+    phase_str = phase_text(phase),
+    output    = ':' + phase_str + ':|dropdown=false \n' +
               '---\n' +
-              phaseText[phase];
+              phaseLabel[phase_str] + '\n' +
+              "Completed " + Math.round(phase*100) + "% of lunar cycle";
 
 console.log(output);
