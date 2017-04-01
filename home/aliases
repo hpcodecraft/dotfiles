@@ -150,3 +150,4 @@ alias htaccess="cat /Applications/MAMP/conf/apache/httpd.conf|grep AccessFileNam
 alias npm-default="npm config set registry https://registry.npmjs.org"
 alias npm-xing="npm config set registry http://npmo.dc.xing.com:8080"
 
+alias yarn-reset="rm -rf node_modules yarn.lock && yarn"

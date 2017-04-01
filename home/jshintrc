@@ -1,4 +1,5 @@
 {
   "esversion": 6,
-  "quotmark": false
+  "quotmark": false,
+  "-W138": true
 }
