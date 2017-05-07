@@ -63,7 +63,7 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
@@ -134,7 +134,7 @@ alias nw="/Applications/nwjs.app/Contents/MacOS/nwjs"
 alias gitlog="git log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias npm-list-global="npm list -g --depth=0"
 alias npm-list-here="npm list --depth=0"
-alias whatgoeslive="git diff production..master"
+
 alias gurnt="grunt"
 alias got="git"
 alias gti="git"
@@ -146,8 +146,5 @@ alias yolo="git commit -am '`curl -s http://whatthecommit.com/index.txt`'"
 alias list-zsh-colors="spectrum_ls"
 
 alias htaccess="cat /Applications/MAMP/conf/apache/httpd.conf|grep AccessFileName|tail -n 1|awk '{ print $2 }'"
-
-alias npm-default="npm config set registry https://registry.npmjs.org"
-alias npm-xing="npm config set registry http://npmo.dc.xing.com:8080"
 
 alias yarn-reset="rm -rf node_modules yarn.lock && yarn"

@@ -19,8 +19,8 @@
       "language-c"
       "exception-reporting"
       "background-tips"
-      "emmet"
       "dash"
+      "jshint"
     ]
     themes: [
       "atom-dark-ui"
@@ -28,6 +28,7 @@
     ]
   editor:
     fontFamily: "Inconsolata-dz"
+    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -38,6 +39,7 @@
     userId: "93b4b548-bd92-929b-94c1-d943d5b6d3f9"
   jshint:
     supportLintingJsx: true
+  "linter-ui-default": {}
   "markdown-preview":
     useGitHubStyle: true
   minimap: {}
