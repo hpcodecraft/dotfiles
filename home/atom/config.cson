@@ -21,6 +21,7 @@
       "background-tips"
       "dash"
       "jshint"
+      "tree-view-bundler"
     ]
     themes: [
       "atom-dark-ui"

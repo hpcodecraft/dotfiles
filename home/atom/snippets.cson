@@ -28,3 +28,7 @@
   'byebug':
     'prefix': 'bb'
     'body': 'require "byebug"; byebug;'
+'.source.js':
+  'Functional React Component':
+    'prefix': 'fcomp'
+    'body': 'import React from \'react\';\n\nconst $1 = (props) => {\n\treturn (\n\t\t$2\n\t);\n};\n\nexport default $1;'
