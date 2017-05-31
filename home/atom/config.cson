@@ -20,7 +20,6 @@
       "exception-reporting"
       "background-tips"
       "dash"
-      "jshint"
       "tree-view-bundler"
     ]
     themes: [

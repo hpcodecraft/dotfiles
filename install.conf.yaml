@@ -18,7 +18,6 @@
     ~/.gitignore: home/gitignore
     ~/.hyperterm.js: home/hyperterm.js
     ~/.js: home/js
-    ~/.jshintrc: home/jshintrc
     ~/.nanorc: home/nanorc
     ~/.oh-my-zsh: home/oh-my-zsh
     ~/.profile: home/profile
