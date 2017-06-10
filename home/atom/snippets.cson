@@ -24,11 +24,14 @@
   'Include debugger':
     'prefix': 'debug'
     'body': '<% require \'pry\'; binding.pry %>'
-'.source.ruby':
+'.source.rb':
   'byebug':
     'prefix': 'bb'
     'body': 'require "byebug"; byebug;'
 '.source.js':
-  'Functional React Component':
+  'Functional React component':
     'prefix': 'fcomp'
     'body': 'import React from "react";\n\nconst $1 = (props) => {\n\treturn (\n\t\t$2\n\t);\n};\n\nexport default $1;'
+  'Redux container component':
+    'prefix': 'rcont'
+    'body': 'import { connect } from "react-redux";\n\nconst mapStateToProps = (state) => {\n\treturn {\n\t};\n};\n\nconst mapDispatchToProps = (dispatch) => {\n\treturn {\n\t};\n};\n\nconst $1 = () => {\n\treturn <div></div>;\n};\n\nexport default connect(\n\tmapStateToProps,\n\tmapDispatchToProps\n)($1);'
