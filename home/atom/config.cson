@@ -1,4 +1,12 @@
 "*":
+  "activate-power-mode":
+    comboMode:
+      activationThreshold: 10
+      opacity: 0.5
+    particles:
+      spawnCount:
+        max: 10
+    playAudio: {}
   core:
     audioBeep: false
     disabledPackages: [
@@ -20,7 +28,6 @@
       "exception-reporting"
       "background-tips"
       "dash"
-      "tree-view-bundler"
     ]
     themes: [
       "atom-dark-ui"

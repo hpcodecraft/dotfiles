@@ -31,11 +31,11 @@ try:
     print "|image=" + pihole_connected_image
     print "---"
     print "Ads blocked:"
-    print json['ads_blocked_today'] + "| href=" + pihole
+    print str(json['ads_blocked_today']) + "| href=" + pihole
     print "DNS queries:"
-    print json['dns_queries_today'] + "| href=" + pihole
+    print str(json['dns_queries_today']) + "| href=" + pihole
     print "Domain list size:"
-    print json['domains_being_blocked'] + "| href=" + pihole
+    print str(json['domains_being_blocked']) + "| href=" + pihole
 
 except:
     print "|image=" + pihole_disconnected_image
