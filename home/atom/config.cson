@@ -1,12 +1,14 @@
 "*":
   "activate-power-mode":
     comboMode:
-      activationThreshold: 10
       opacity: 0.5
     particles:
       spawnCount:
         max: 10
     playAudio: {}
+    plugins:
+      playAudio: true
+      screenShake: true
   core:
     audioBeep: false
     disabledPackages: [

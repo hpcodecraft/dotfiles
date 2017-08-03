@@ -31,10 +31,54 @@
 '.source.js':
   'Functional React component':
     'prefix': 'fcomp'
-    'body': 'import React from "react";\n\nconst $1 = (props) => {\n\treturn (\n\t\t<div>$1</div>\n\t);\n};\n\nexport default $1;'
+    'body': """
+      import React from "react";
+
+      const $1 = (props) => {
+        return (
+          <div>$1</div>
+        );
+      };
+
+      export default $1;
+    """
   'Class React component':
     'prefix': 'ccomp'
-    'body': 'import React from "react";\n\nclass $1 extends React.Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>$1</div>\n\t\t);\n\t}\n}\n\nexport default $1;'
+    'body': """
+      import React from "react";
+
+      class $1 extends React.Component {
+        render() {
+          return (
+            <div>$1</div>
+          );
+        }
+      }
+
+      export default $1;
+    """
   'Redux container component':
     'prefix': 'rcont'
-    'body': 'import { connect } from "react-redux";\n\nconst mapStateToProps = (state) => {\n\treturn {\n\t};\n};\n\nconst mapDispatchToProps = (dispatch) => {\n\treturn {\n\t};\n};\n\nconst $1 = () => {\n\treturn <div></div>;\n};\n\nexport default connect(\n\tmapStateToProps,\n\tmapDispatchToProps\n)($1);'
+    'body': """
+      import { connect } from "react-redux";
+
+      const mapStateToProps = (state) => ({
+        $2
+      });
+
+      const mapDispatchToProps = (dispatch) => ({
+        $3
+      });
+
+      const $1 = () => {
+        return <div>$1</div>;
+      };
+
+      export default connect(
+        mapStateToProps,
+        mapDispatchToProps
+      )($1);
+    """
+  'Redux dispatch in mapDispatchToProps':
+    'prefix': 'pdisp'
+    'body': '$1: ($2) => dispatch($1($2)),'
