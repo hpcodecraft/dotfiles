@@ -10,9 +10,6 @@ $(function() {
       })
       .on('click', function() {
         var list = createList(bullet);
-
-        console.log(list);
-
         var textarea = $('<textarea id="steam-export-textarea">'+list+'</textarea>');
         textarea.css({
           width: '100%',
