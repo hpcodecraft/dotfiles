@@ -12,6 +12,7 @@
     ~/.docker: home/docker
     ~/.exports: home/exports
     ~/.functions: home/functions
+    ~/.fzf.zsh: home/fzf.zsh
     ~/.git-ls: home/git-ls
     ~/.gitattributes: home/gitattributes
     ~/.gitconfig: home/gitconfig
