@@ -53,3 +53,5 @@ antigen bundle denysdovhan/spaceship-zsh-theme
 
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

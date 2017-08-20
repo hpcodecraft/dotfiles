@@ -48,7 +48,8 @@
     userId: "93b4b548-bd92-929b-94c1-d943d5b6d3f9"
   jshint:
     supportLintingJsx: true
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 81
   "markdown-preview":
     useGitHubStyle: true
   minimap: {}
