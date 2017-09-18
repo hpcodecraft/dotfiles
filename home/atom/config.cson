@@ -30,6 +30,8 @@
       "exception-reporting"
       "background-tips"
       "dash"
+      "swackets"
+      "prettier-atom"
     ]
     themes: [
       "atom-dark-ui"

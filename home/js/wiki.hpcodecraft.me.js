@@ -1,7 +1,7 @@
 $(function() {
   if(location.pathname === '/spiele-keys') {
 
-    var bullet = ':pentagram:';
+    var bullet = ':Pentagram:';
     var button = $('<button id="steam-export">Export for Steam</button>');
 
     button
