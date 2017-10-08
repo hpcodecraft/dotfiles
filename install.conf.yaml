@@ -17,7 +17,7 @@
     ~/.gitattributes: home/gitattributes
     ~/.gitconfig: home/gitconfig
     ~/.gitignore: home/gitignore
-    ~/.hyperterm.js: home/hyperterm.js
+    ~/.hyper.js: home/hyper.js
     ~/.js: home/js
     ~/.nanorc: home/nanorc
     ~/.oh-my-zsh: home/oh-my-zsh
