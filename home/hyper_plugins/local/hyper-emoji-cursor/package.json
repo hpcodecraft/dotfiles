@@ -1,0 +1,20 @@
+{
+  "name": "hyper-emoji-cursor",
+  "version": "1.0.2",
+  "description": "Hyper extension to replace your cursor with an emoji sequence. Why? Because I was bored.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpcodecraft/hyper-emoji-cursor.git"
+  },
+  "keywords": [
+    "hyper",
+    "emoji",
+    "cursor"
+  ],
+  "author": "hpcodecraft",
+  "license": "MIT"
+}

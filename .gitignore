@@ -6,5 +6,6 @@ home/js/maedchenflohmarkt.de.js
 home/js/xbox-volker-wieban.env.xing.com.js
 home/ssh
 
-home/hyper_plugins
-!home/hyper_plugins/local
+home/hyper_plugins/cache
+home/hyper_plugins/node_modules
+home/hyper_plugins/package.json

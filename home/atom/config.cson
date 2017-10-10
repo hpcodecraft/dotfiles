@@ -34,8 +34,8 @@
       "prettier-atom"
     ]
     themes: [
-      "atom-dark-ui"
-      "atom-dark-syntax"
+      "dracula-ui"
+      "dracula-syntax"
     ]
   editor:
     fontFamily: "Inconsolata-dz"
