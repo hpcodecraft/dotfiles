@@ -10,7 +10,7 @@ You may configure the extension by adding a `emojiCursor` object to the `.hyper.
 
 ```javascript
 emojiCursor: {
-  speed: 3000, // length of the sequence in milliseconds
+  speed: 2000, // length of the sequence in milliseconds
   fontSize: 60, // font size of the emoji in css pixels
   emoji: ['🐱', '🙀', '😾', '😿', '😹', '😼', '😺', '😻', '😸', '😽'] // custom emoji sequence.
 },

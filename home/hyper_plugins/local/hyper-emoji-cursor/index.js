@@ -12,7 +12,7 @@ function createAnimation(chars) {
 exports.decorateConfig = (config) => {
   const emojiConfig = Object.assign({
     fontSize: config.fontSize,
-    speed: 1000,
+    speed: 10*1000,
     emoji: ['👽', '💀'],
   }, config.emojiCursor);
 
