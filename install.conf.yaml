@@ -10,6 +10,7 @@
     ~/.antigenrc: home/antigenrc
     ~/.atom: home/atom
     ~/.bitbar: home/bitbar
+    ~/.docker: home/docker
     ~/.exports: home/exports
     ~/.functions: home/functions
     ~/.fzf.zsh: home/fzf.zsh
@@ -18,6 +19,7 @@
     ~/.gitconfig: home/gitconfig
     ~/.gitignore: home/gitignore
     ~/.hyper.js: home/hyper.js
+    ~/.hyper_plugins: home/hyper_plugins
     ~/.js: home/js
     ~/.nanorc: home/nanorc
     ~/.oh-my-zsh: home/oh-my-zsh

@@ -9,7 +9,6 @@ setopt RM_STAR_WAIT
 
 . `brew --prefix`/etc/profile.d/z.sh
 
-
 # load zmv
 autoload zmv
 

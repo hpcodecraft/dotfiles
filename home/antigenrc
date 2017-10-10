@@ -8,13 +8,12 @@ antigen bundle gem
 antigen bundle git
 antigen bundle github
 antigen bundle heroku
-#antigen bundle lol
 antigen bundle node
 antigen bundle npm
 antigen bundle osx
-#antigen bundle rails
-#antigen bundle ruby
-#antigen bundle rvm
+antigen bundle rails
+antigen bundle ruby
+antigen bundle rvm
 antigen bundle z
 
 # Syntax highlighting bundle.

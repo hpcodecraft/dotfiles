@@ -89,7 +89,6 @@ module.exports = {
     // "hyper-cat",
     "hyperpower",
     "hyper-command-gifs",
-    "hyper-cat-cursor",
     "gitrocket",
     "hyperterm-tabs",
     "hyperlinks",
@@ -102,5 +101,7 @@ module.exports = {
   // in development, you can create a directory under
   // `~/.hyperterm_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: []
+  localPlugins: [
+    "hyper-emoji-cursor",
+  ]
 };
