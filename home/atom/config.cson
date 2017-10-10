@@ -35,7 +35,7 @@
     ]
     themes: [
       "atom-dark-ui"
-      "gruvbox-plus-syntax"
+      "atom-dark-syntax"
     ]
   editor:
     fontFamily: "Inconsolata-dz"

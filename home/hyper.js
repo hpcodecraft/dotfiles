@@ -1,16 +1,20 @@
 module.exports = {
   config: {
+    // Choose either "stable" for receiving highly polished,
+    // or "canary" for less polished but more frequent updates
+    updateChannel: 'stable',
+
     // default font size in pixels for all tabs
     fontSize: 15,
 
     // font family with optional fallbacks
-    fontFamily: 'Inconsolata-dz, Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily: 'Meslo LG L DZ Regular for Powerline, monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.75)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'UNDERLINE',
 
     // color of the text
     foregroundColor: '#fff',
@@ -82,8 +86,17 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyper-cat",
-    "gitrocket"
+    // "hyper-cat",
+    "hyperpower",
+    "hyper-command-gifs",
+    "hyper-cat-cursor",
+    "gitrocket",
+    "hyperterm-tabs",
+    "hyperlinks",
+    // "hyper-darkmatter"
+    // "hyper-dracula"
+    // "hyperatompunk"
+    "hyperpunk"
   ],
 
   // in development, you can create a directory under

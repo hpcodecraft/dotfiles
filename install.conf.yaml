@@ -7,9 +7,9 @@
 
 - link:
     ~/.aliases: home/aliases
+    ~/.antigenrc: home/antigenrc
     ~/.atom: home/atom
     ~/.bitbar: home/bitbar
-    ~/.docker: home/docker
     ~/.exports: home/exports
     ~/.functions: home/functions
     ~/.fzf.zsh: home/fzf.zsh
@@ -21,7 +21,6 @@
     ~/.js: home/js
     ~/.nanorc: home/nanorc
     ~/.oh-my-zsh: home/oh-my-zsh
-    ~/.profile: home/profile
     ~/.rspec: home/rspec
     ~/.screenrc: home/screenrc
     ~/.sounds: home/sounds
