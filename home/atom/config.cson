@@ -51,7 +51,7 @@
   jshint:
     supportLintingJsx: true
   "linter-ui-default":
-    panelHeight: 81
+    showPanel: true
   "markdown-preview":
     useGitHubStyle: true
   minimap: {}

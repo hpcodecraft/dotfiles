@@ -148,5 +148,10 @@ alias list-zsh-colors="spectrum_ls"
 alias htaccess="cat /Applications/MAMP/conf/apache/httpd.conf|grep AccessFileName|tail -n 1|awk '{ print $2 }'"
 
 alias yarn-reset="rm -rf node_modules yarn.lock && yarn"
+
+# docker shortcuts
+alias dcl="docker container list"
+alias dil="docker image list"
+alias dvl="docker volume list"
 alias docker-delete-containers="docker rm $(docker ps -a -q)"
 alias docker-delete-images="docker rmi $(docker images -q)"

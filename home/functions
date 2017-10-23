@@ -203,3 +203,20 @@ function _exit_code_prompt() {
     echo "$EXIT_CODE_PROMPT"
   fi
 }
+
+
+# integrate fzf with z
+unalias z 2> /dev/null
+
+z() {
+  [ $# -gt 0 ] && _z "$*" && return
+  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}
+
+# integrate fzf with rvm
+frb() {
+  local rb
+  rb=$((echo system; rvm list | grep ruby | cut -c 4-) |
+       awk '{print $1}' |
+       fzf-tmux -l 30 +m --reverse) && rvm use $rb
+}

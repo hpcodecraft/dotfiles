@@ -26,6 +26,7 @@
     ~/.rspec: home/rspec
     ~/.screenrc: home/screenrc
     ~/.sounds: home/sounds
+    ~/.tokens: home/tokens
     ~/.wgetrc: home/wgetrc
     ~/.zshrc: home/zshrc
 
