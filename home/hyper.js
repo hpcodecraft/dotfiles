@@ -5,7 +5,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 15,
+    fontSize: 20,
 
     // font family with optional fallbacks
     fontFamily: 'Meslo LG L DZ Regular for Powerline, monospace',
@@ -89,13 +89,12 @@ module.exports = {
     // "hyper-cat",
     "hyperpower",
     "hyper-command-gifs",
-    "gitrocket",
     "hyperterm-tabs",
     "hyperlinks",
     // "hyper-darkmatter"
-    // "hyper-dracula"
+    "hyper-dracula"
     // "hyperatompunk"
-    "hyperpunk"
+    // "hyperpunk"
   ],
 
   // in development, you can create a directory under
