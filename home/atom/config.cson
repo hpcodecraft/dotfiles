@@ -32,8 +32,6 @@
       "exception-reporting"
       "background-tips"
       "dash"
-      "swackets"
-      "prettier-atom"
       "tree-view-search-bar"
     ]
     themes: [
@@ -42,7 +40,7 @@
     ]
   editor:
     fontFamily: "Inconsolata-dz"
-    fontSize: 16
+    fontSize: 19
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -59,6 +57,11 @@
     useGitHubStyle: true
   minimap: {}
   "one-dark-ui": {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      showInStatusBar: true
+    useEslint: true
   swackets:
     colorParens: true
     colorSquareBrackets: true

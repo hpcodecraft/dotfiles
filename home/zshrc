@@ -7,8 +7,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 setopt RM_STAR_WAIT
 
-. `brew --prefix`/etc/profile.d/z.sh
-
 # load zmv
 autoload zmv
 
@@ -30,6 +28,10 @@ source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.git-ls
 
-# load work-related stuff
-source $HOME/.xing.env
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# load git-extras completion
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh

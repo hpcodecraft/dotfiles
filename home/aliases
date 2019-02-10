@@ -135,10 +135,13 @@ alias gitlog="git log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C
 alias npm-list-global="npm list -g --depth=0"
 alias npm-list-here="npm list --depth=0"
 
+# Typo fixes
 alias gurnt="grunt"
 alias got="git"
 alias gti="git"
+alias gut="git"
 alias rials="rails"
+
 alias rake_db_migrate="rake db:migrate && rake db:migrate RAILS_ENV=test"
 
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
@@ -147,11 +150,20 @@ alias list-zsh-colors="spectrum_ls"
 
 alias htaccess="cat /Applications/MAMP/conf/apache/httpd.conf|grep AccessFileName|tail -n 1|awk '{ print $2 }'"
 
+# yarn shortcuts
+alias ys="yarn start"
+alias yt="yarn test"
+alias yw="yarn test:watch"
+alias yb="yarn build"
 alias yarn-reset="rm -rf node_modules yarn.lock && yarn"
 
 # docker shortcuts
 alias dcl="docker container list"
 alias dil="docker image list"
 alias dvl="docker volume list"
-alias docker-delete-containers="docker rm $(docker ps -a -q)"
-alias docker-delete-images="docker rmi $(docker images -q)"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
+#alias docker-delete-containers="docker rm $(docker ps -a -q)"
+#alias docker-delete-images="docker rmi $(docker images -q)"
+
+alias "c."="code ."
