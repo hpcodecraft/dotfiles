@@ -3,12 +3,11 @@
       create: true
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.aliases: home/aliases
     ~/.antigenrc: home/antigenrc
-    ~/.atom: home/atom
     ~/.bitbar: home/bitbar
     ~/.docker: home/docker
     ~/.exports: home/exports
@@ -23,7 +22,6 @@
     ~/.js: home/js
     ~/.nanorc: home/nanorc
     ~/.oh-my-zsh: home/oh-my-zsh
-    ~/.rspec: home/rspec
     ~/.screenrc: home/screenrc
     ~/.sounds: home/sounds
     ~/.tokens: home/tokens
@@ -31,4 +29,4 @@
     ~/.zshrc: home/zshrc
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]

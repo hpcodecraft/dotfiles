@@ -15,20 +15,11 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
-# set path for own shell scripts
-export PATH="$HOME/Projects/Github/shell-scripts:$PATH"
-
 # set path for npm
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-# add MAMP binaries to path
-export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.6.2/bin:$PATH"
-
 # set path for homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
-# Add RVM to PATH for scripting
-export PATH="$HOME/.rvm/bin:$PATH"
 
 # fix special chars in hyperterm
 export LANG=de_DE.UTF-8

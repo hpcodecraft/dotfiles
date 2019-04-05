@@ -19,10 +19,6 @@ bindkey "^[^[[D" backward-word
 
 # Source own config files
 source $HOME/.exports
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 source $HOME/.tokens
 source $HOME/.aliases
 source $HOME/.functions
@@ -31,7 +27,10 @@ source $HOME/.git-ls
 # load nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # load git-extras completion
 source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
+# thefuck integration
+eval $(thefuck --alias)
