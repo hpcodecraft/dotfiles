@@ -214,10 +214,16 @@ z() {
   cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
-# integrate fzf with rvm
-frb() {
-  local rb
-  rb=$((echo system; rvm list | grep ruby | cut -c 4-) |
-       awk '{print $1}' |
-       fzf-tmux -l 30 +m --reverse) && rvm use $rb
+# generate a QR code from a given text
+# usage:
+# qr http://example.com 
+function qr() {
+  echo $1 | curl -F-=\<- qrenco.de
+}
+
+# look up things on cheat.sh
+# usage:
+# cheat js/sort
+function cheat() {
+  curl cht.sh/$1
 }
