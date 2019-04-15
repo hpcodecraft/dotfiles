@@ -220,10 +220,3 @@ z() {
 function qr() {
   echo $1 | curl -F-=\<- qrenco.de
 }
-
-# look up things on cheat.sh
-# usage:
-# cheat js/sort
-function cheat() {
-  curl cht.sh/$1
-}
