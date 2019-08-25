@@ -15,9 +15,6 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
-# set path for npm
-export PATH="/usr/local/share/npm/bin:$PATH"
-
 # set path for homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 

@@ -1,5 +1,19 @@
-source $HOME/.antigen/antigen.zsh
-antigen init $HOME/.antigenrc
+# Antibody
+
+# where is antibody keeping its stuff?
+ANTIBODY_HOME="$(antibody home)"
+
+# set the theme to something, or blank if you use a non omz theme
+ZSH_THEME="cloud"
+
+# tell omz where it lives
+export ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
+
+# quit bugging me!
+DISABLE_AUTO_UPDATE=true
+
+source <(antibody init)
+antibody bundle <~/.zsh_plugins
 
 COMPLETION_WAITING_DOTS="true"
 ZSH_CUSTOM=$HOME/Projects/Github/dotfiles/home/zsh-custom
@@ -34,3 +48,6 @@ source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 # thefuck integration
 eval $(thefuck --alias)
+
+# load MOIA stuff
+[ -f "$HOME/.moia" ] && source $HOME/.moia

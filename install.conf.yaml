@@ -7,12 +7,10 @@
 
 - link:
     ~/.aliases: home/aliases
-    ~/.antigenrc: home/antigenrc
     ~/.bitbar: home/bitbar
     ~/.docker: home/docker
     ~/.exports: home/exports
     ~/.functions: home/functions
-    ~/.fzf.zsh: home/fzf.zsh
     ~/.git-ls: home/git-ls
     ~/.gitattributes: home/gitattributes
     ~/.gitconfig: home/gitconfig
@@ -21,12 +19,12 @@
     ~/.hyper_plugins: home/hyper_plugins
     ~/.js: home/js
     ~/.nanorc: home/nanorc
-    ~/.oh-my-zsh: home/oh-my-zsh
     ~/.screenrc: home/screenrc
     ~/.sounds: home/sounds
     ~/.tokens: home/tokens
     ~/.wgetrc: home/wgetrc
+    ~/.zsh_plugins: home/zsh_plugins
     ~/.zshrc: home/zshrc
-
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
+#
+# - shell:
+#   - [git submodule update --init --recursive, Installing submodules]
