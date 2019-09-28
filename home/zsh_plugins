@@ -1,29 +1,23 @@
 # Load the oh-my-zsh's library.
 robbyrussell/oh-my-zsh
 
-robbyrussell/oh-my-zsh path:plugins/docker
-robbyrussell/oh-my-zsh path:plugins/docker-compose
-robbyrussell/oh-my-zsh path:plugins/gem
-robbyrussell/oh-my-zsh path:plugins/git
-robbyrussell/oh-my-zsh path:plugins/github
-robbyrussell/oh-my-zsh path:plugins/heroku
-robbyrussell/oh-my-zsh path:plugins/node
-robbyrussell/oh-my-zsh path:plugins/npm
-robbyrussell/oh-my-zsh path:plugins/osx
-robbyrussell/oh-my-zsh path:plugins/themes
-robbyrussell/oh-my-zsh path:plugins/z
+# robbyrussell/oh-my-zsh path:plugins/docker
+# robbyrussell/oh-my-zsh path:plugins/docker-compose
+# robbyrussell/oh-my-zsh path:plugins/gem
+# robbyrussell/oh-my-zsh path:plugins/git
+# robbyrussell/oh-my-zsh path:plugins/github
+# robbyrussell/oh-my-zsh path:plugins/heroku
+# robbyrussell/oh-my-zsh path:plugins/node
+# robbyrussell/oh-my-zsh path:plugins/npm
+# robbyrussell/oh-my-zsh path:plugins/osx
+# robbyrussell/oh-my-zsh path:plugins/themes
+# robbyrussell/oh-my-zsh path:plugins/z
+
+# Alias reminder
+MichaelAquilina/zsh-you-should-use
 
 # Syntax highlighting bundle.
 zsh-users/zsh-syntax-highlighting
 
 # Autoenv
 Tarrasch/zsh-autoenv
-
-# Load the theme
-
-# robbyrussell/oh-my-zsh path:themes/cloud.zsh-theme
-
-# antigen theme cloud
-
-# Tell antigen that you're done.
-# antigen apply

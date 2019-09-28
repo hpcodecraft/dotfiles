@@ -157,6 +157,25 @@ alias yw="yarn test:watch"
 alias yb="yarn build"
 alias yarn-reset="rm -rf node_modules yarn.lock && yarn"
 
+# npm shortcuts
+alias ns="npm start"
+alias nr="npm run"
+alias nt="npm test"
+alias npm-reset="rm -rf node_modules package-lock.json && npm i"
+
+# git shortcuts
+alias ga="git add"
+alias gc="git checkout"
+alias gco="git commit"
+alias gcom="git commit -m"
+alias gm="git merge"
+alias gmv="git move"
+alias gp="git pull"
+alias gpsh="git push"
+alias gs="git status"
+alias save="git stash"
+alias load="git stash apply"
+
 # docker shortcuts
 alias dcl="docker container list"
 alias dil="docker image list"

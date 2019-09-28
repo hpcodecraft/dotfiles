@@ -3,6 +3,21 @@
 # where is antibody keeping its stuff?
 ANTIBODY_HOME="$(antibody home)"
 
+# omz plugins
+plugins=(
+  docker
+  docker-compose
+  gem
+  git
+  github
+  heroku
+  node
+  npm
+  osx
+  themes
+  z
+)
+
 # set the theme to something, or blank if you use a non omz theme
 ZSH_THEME="cloud"
 
@@ -15,7 +30,7 @@ DISABLE_AUTO_UPDATE=true
 source <(antibody init)
 antibody bundle <~/.zsh_plugins
 
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS=true
 ZSH_CUSTOM=$HOME/Projects/Github/dotfiles/home/zsh-custom
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
