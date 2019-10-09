@@ -48,7 +48,6 @@ bindkey "^[^[[D" backward-word
 
 # Source own config files
 source $HOME/.exports
-source $HOME/.tokens
 source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.git-ls
@@ -63,6 +62,9 @@ source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 # thefuck integration
 eval $(thefuck --alias)
+
+# read tokens if we have them
+[ -f "$HOME/.tokens" ] && source $HOME/.tokens
 
 # load MOIA stuff
 [ -f "$HOME/.moia" ] && source $HOME/.moia
