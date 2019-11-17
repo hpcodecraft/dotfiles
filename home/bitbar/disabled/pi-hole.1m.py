@@ -8,6 +8,11 @@
 # <bitbar.image>http://gis.ee/files/pihole-bitbar.png</bitbar.image>
 # <bitbar.dependencies>pi-hole,python</bitbar.dependencies>
 
+
+# NOTE from @hpcodecraft
+# This is a modified version of the original Pi-Hole script found in the official plugins repo
+# It adds the Pi-Hole icon to the status bar and gives more information if Pi-Hole can't be found
+
 import urllib2
 import json
 
