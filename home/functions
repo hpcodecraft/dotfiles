@@ -220,3 +220,12 @@ z() {
 function qr() {
   echo $1 | curl -F-=\<- qrenco.de
 }
+
+
+# sync a forked github repo with the original
+function git-sync-fork() {
+  git fetch upstream
+  git checkout master
+  git merge upstream/master
+  git push origin
+}
