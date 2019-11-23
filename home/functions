@@ -5,7 +5,7 @@ function mkd() {
 
 # Determine size of a file or total size of a directory
 function fs() {
-	if du -b /dev/null > /dev/null 2>&1; then
+	if du -b /dev/null >/dev/null 2>&1; then
 		local arg=-sbh
 	else
 		local arg=-sh
@@ -71,7 +71,7 @@ function httpcompression() {
 # Usage: `json '{"foo":42}'` or `echo '{"foo":42}' | json`
 function json() {
 	if [ -t 0 ]; then # argument
-		python -mjson.tool <<< "$*" | pygmentize -l javascript
+		python -mjson.tool <<<"$*" | pygmentize -l javascript
 	else # pipe
 		python -mjson.tool | pygmentize -l javascript
 	fi
@@ -148,13 +148,13 @@ function unquarantine() {
 
 # Check which service is running on a given port
 function checkport() {
-	lsof -Pan -i tcp -i udp |grep ":$1"
+	lsof -Pan -i tcp -i udp | grep ":$1"
 }
 
 # Show amount of free space on / in percent
 function free_space() {
-	USEDPERC=`df -h|grep \ /$|tr -s ' ' ':'|cut -d ':' -f 5|tr -d '%'`
-	echo $(( 100 - $USEDPERC ))'%'
+	USEDPERC=$(df -h | grep \ /$ | tr -s ' ' ':' | cut -d ':' -f 5 | tr -d '%')
+	echo $((100 - $USEDPERC))'%'
 }
 
 # Recursively clean up OS resource forks from a folder
@@ -176,13 +176,13 @@ function airdrop() {
 }
 
 check_process() {
-  echo "$ts: checking $1"
-  [ "$1" = "" ]  && return 0
-  [ `pgrep -n $1` ] && return 1 || return 0
+	echo "$ts: checking $1"
+	[ "$1" = "" ] && return 0
+	[ $(pgrep -n $1) ] && return 1 || return 0
 }
 
 # find shorthand
-function f()  {
+function f() {
 	find . -name "$1"
 }
 
@@ -195,37 +195,51 @@ function docker-bash() {
 }
 
 function _exit_code_prompt() {
-  local LAST_EXIT_CODE=$?
-  if [[ $LAST_EXIT_CODE -ne 0 ]]; then
-    local EXIT_CODE_PROMPT=' '
-    EXIT_CODE_PROMPT+="%{$fg[red]%}-%{$reset_color%}"
-    EXIT_CODE_PROMPT+="%{$fg_bold[red]%}$LAST_EXIT_CODE%{$reset_color%}"
-    EXIT_CODE_PROMPT+="%{$fg[red]%}-%{$reset_color%}"
-    echo "$EXIT_CODE_PROMPT"
-  fi
+	local LAST_EXIT_CODE=$?
+	if [[ $LAST_EXIT_CODE -ne 0 ]]; then
+		local EXIT_CODE_PROMPT=' '
+		EXIT_CODE_PROMPT+="%{$fg[red]%}-%{$reset_color%}"
+		EXIT_CODE_PROMPT+="%{$fg_bold[red]%}$LAST_EXIT_CODE%{$reset_color%}"
+		EXIT_CODE_PROMPT+="%{$fg[red]%}-%{$reset_color%}"
+		echo "$EXIT_CODE_PROMPT"
+	fi
 }
 
-
 # integrate fzf with z
-unalias z 2> /dev/null
+unalias z 2>/dev/null
 
 z() {
-  [ $# -gt 0 ] && _z "$*" && return
-  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+	[ $# -gt 0 ] && _z "$*" && return
+	cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
 # generate a QR code from a given text
 # usage:
-# qr http://example.com 
+# qr http://example.com
 function qr() {
-  echo $1 | curl -F-=\<- qrenco.de
+	echo $1 | curl -F-=\<- qrenco.de
 }
-
 
 # sync a forked github repo with the original
 function git-sync-fork() {
-  git fetch upstream
-  git checkout master
-  git merge upstream/master
-  git push origin
+	git fetch upstream
+	git checkout master
+	git merge upstream/master
+	git push origin
 }
+
+# function ssh() {
+
+# 	echo "args: $@"
+
+# 	local ssh_cmd=/usr/bin/ssh
+# 	local ledger_config_file=~/.ssh/ledger.conf
+
+# 	if [ -f $ledger_config_file ] && grep -q '$@' $ledger_config_file; then
+# 		echo "Using Ledger Agent"
+# 		ledger-agent -c $@ 2>/dev/null || echo "Connection failed. Please make sure your device is connected and unlocked"
+# 	else
+# 		echo "Using system SSH"
+# 		$ssh_cmd $@
+# 	fi
+# }

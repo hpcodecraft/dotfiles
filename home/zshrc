@@ -68,3 +68,6 @@ eval $(thefuck --alias)
 
 # load MOIA stuff
 [ -f "$HOME/.moia" ] && source $HOME/.moia
+
+# use Ledger to sign
+export GNUPGHOME=~/.gnupg/ledger
