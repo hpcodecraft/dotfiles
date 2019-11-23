@@ -11,7 +11,6 @@ alias w="cd ~/Work"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias s="subl ."
 alias o="open"
 alias oo="open ."
 alias c="clear"
@@ -148,8 +147,6 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to 
 alias yolo="git commit -am '`curl -s http://whatthecommit.com/index.txt`'"
 alias list-zsh-colors="spectrum_ls"
 
-alias htaccess="cat /Applications/MAMP/conf/apache/httpd.conf|grep AccessFileName|tail -n 1|awk '{ print $2 }'"
-
 # yarn shortcuts
 alias ys="yarn start"
 alias yt="yarn test"
@@ -182,7 +179,7 @@ alias dil="docker image list"
 alias dvl="docker volume list"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
-#alias docker-delete-containers="docker rm $(docker ps -a -q)"
-#alias docker-delete-images="docker rmi $(docker images -q)"
+alias docker-delete-containers="docker rm `docker ps -a -q`"
+alias docker-delete-images="docker rmi `docker images -q`"
 
 alias "c."="code ."
