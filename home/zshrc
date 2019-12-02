@@ -1,73 +1,79 @@
-# Antibody
+if [ $SHLVL -eq 1 ]; then
+  # use Ledger to sign
+  export DISPLAY=:0 # silence warning
+  export GNUPGHOME=~/.gnupg/ledger
 
-# where is antibody keeping its stuff?
-ANTIBODY_HOME="$(antibody home)"
+  ledger-agent ~/.ssh/ledger.conf -s
+else
+  # Antibody
 
-# omz plugins
-plugins=(
-  docker
-  docker-compose
-  gem
-  git
-  github
-  heroku
-  node
-  npm
-  osx
-  themes
-  z
-)
+  # where is antibody keeping its stuff?
+  ANTIBODY_HOME="$(antibody home)"
 
-# set the theme to something, or blank if you use a non omz theme
-ZSH_THEME="cloud"
+  # omz plugins
+  plugins=(
+    docker
+    docker-compose
+    gem
+    git
+    github
+    heroku
+    node
+    npm
+    osx
+    themes
+    z
+  )
 
-# tell omz where it lives
-export ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
+  # set the theme to something, or blank if you use a non omz theme
+  ZSH_THEME="cloud"
 
-# quit bugging me!
-DISABLE_AUTO_UPDATE=true
+  # tell omz where it lives
+  export ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
 
-source <(antibody init)
-antibody bundle <~/.zsh_plugins
+  # quit bugging me!
+  DISABLE_AUTO_UPDATE=true
 
-COMPLETION_WAITING_DOTS=true
-ZSH_CUSTOM=$HOME/Projects/Github/dotfiles/home/zsh-custom
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
-setopt RM_STAR_WAIT
+  source <(antibody init)
+  antibody bundle <~/.zsh_plugins
 
-# load zmv
-autoload zmv
+  COMPLETION_WAITING_DOTS=true
+  ZSH_CUSTOM=$HOME/Projects/Github/dotfiles/home/zsh-custom
+  ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+  ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+  setopt RM_STAR_WAIT
 
-# Bind some keys
-bindkey "^[^[[C" forward-word
-bindkey "^[^[[D" backward-word
+  # load zmv
+  autoload zmv
 
-# Init fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  # Bind some keys
+  bindkey "^[^[[C" forward-word
+  bindkey "^[^[[D" backward-word
 
-# Source own config files
-source $HOME/.exports
-source $HOME/.aliases
-source $HOME/.functions
-source $HOME/.git-ls
+  # Init fzf
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+  # Source own config files
+  source $HOME/.exports
+  source $HOME/.aliases
+  source $HOME/.functions
+  source $HOME/.git-ls
 
-# load git-extras completion
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+  # load nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-# thefuck integration
-eval $(thefuck --alias)
+  # load git-extras completion
+  source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
-# read tokens if we have them
-[ -f "$HOME/.tokens" ] && source $HOME/.tokens
+  # thefuck integration
+  eval $(thefuck --alias)
 
-# load MOIA stuff
-[ -f "$HOME/.moia" ] && source $HOME/.moia
+  # read tokens if we have them
+  [ -f "$HOME/.tokens" ] && source $HOME/.tokens
 
-# use Ledger to sign
-export GNUPGHOME=~/.gnupg/ledger
+  # load MOIA stuff
+  [ -f "$HOME/.moia" ] && source $HOME/.moia
+
+fi
