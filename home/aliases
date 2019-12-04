@@ -183,3 +183,5 @@ alias docker-delete-containers="docker rm `docker ps -a -q`"
 alias docker-delete-images="docker rmi `docker images -q`"
 
 alias "c."="code ."
+
+alias lea="ledger-agent ~/.ssh/ledger.conf -s"
